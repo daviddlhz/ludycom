@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { LocalStorageService } from '@core/services/localstorage.service';
-
+import { localStorageProvider } from '@domain/localstorage/localstorage.provider';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -13,7 +12,7 @@ import { AppComponent } from './app.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [LocalStorageService],
+  providers: [localStorageProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

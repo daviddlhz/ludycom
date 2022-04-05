@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { UsersComponent } from './users.component';
 import { RouterModule } from '@angular/router';
 import { userRoutes } from './users.routing';
+import { ReactiveFormsModule } from '@angular/forms';
+import { usersProvider } from '@domain/users/users.provider';
 
 
 
@@ -12,7 +14,9 @@ import { userRoutes } from './users.routing';
   ],
   imports: [
     CommonModule,
+    ReactiveFormsModule,
     RouterModule.forChild(userRoutes),
-  ]
+  ],
+  providers: [usersProvider]
 })
 export class UsersModule { }
